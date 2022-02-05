@@ -1,0 +1,38 @@
+.btn{
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  transition: 0.3s all;
+  &:hover{
+      color: var(--color-main);
+      background-color: var(--color-light);
+      svg{
+        fill: var(--color-main);
+      }
+  }
+}
+.btn-close{
+  position: fixed;
+  top: 50px;
+  right: 5%;
+  padding: 10px;
+  transition: 0.3s all;
+  svg{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    vertical-align: middle;
+    transition: 0.3s all;
+    fill: white;
+  }
+  border: 1px solid var(--color-light);
+  border-radius: 10px;
+  &:hover{
+    background-color: var(--color-light);
+    svg{
+      fill: var(--color-main);
+    }
+  }
+}

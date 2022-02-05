@@ -1,0 +1,23 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+// подключения компонентов страницы
+@import "./components/accordion";
+@import "./components/main-page";
+@import "./components/back";
+@import "./components/title";
+@import "./components/btn";
+
+// тестовые стили, удалите их
+.page__body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: var(--vh);
+  background-color: var(--color-main);
+  color: var(--color-light);
+}

@@ -1,0 +1,32 @@
+.back {
+  position: fixed;
+  top: 50%;
+}
+.back a {
+  color: var(--color-light);
+}
+.back svg {
+  fill: var(--color-light);
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  vertical-align: middle;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.back-link {
+  right: 5%;
+}
+.back-link svg {
+  margin-left: 5px;
+}
+
+.back-left {
+  left: 5%;
+}
+.back-left svg {
+  margin-right: 5px;
+}

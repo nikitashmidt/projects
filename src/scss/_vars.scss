@@ -1,0 +1,15 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Segoe UI", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  // colors
+  --color-light: #fff;
+  --color-main:#474545;
+  --color-css: rgb(76, 166, 250);
+  --color-html: rgb(235, 109, 26);
+  --color-main-title: rgb(183, 0, 255);
+}

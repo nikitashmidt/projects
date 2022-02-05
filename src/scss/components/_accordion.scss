@@ -1,0 +1,78 @@
+.accordion {
+  --accordion-time: 0.3s;
+  margin-bottom: 10px;
+}
+.accordion__control {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border: 1px solid #cccccc;
+  border-radius: 15px;
+  padding: 18px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.accordion__control:focus {
+  outline: none;
+}
+.accordion__control:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.accordion__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  margin-top: 20px;
+  will-change: max-height;
+  -webkit-transition: all var(--accordion-time) ease-out;
+  -o-transition: all var(--accordion-time) ease-out;
+  transition: all var(--accordion-time) ease-out;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.accordion__title {
+  font-weight: bold;
+  font-size: 1.17em;
+  color: white;
+}
+
+.accordion__icon {
+  -webkit-transition: -webkit-transform var(--accordion-time) ease-out;
+  transition: -webkit-transform var(--accordion-time) ease-out;
+  -o-transition: transform var(--accordion-time) ease-out;
+  transition: transform var(--accordion-time) ease-out;
+  transition: transform var(--accordion-time) ease-out, -webkit-transform var(--accordion-time) ease-out;
+}
+
+.is-open .accordion__icon {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.is-open .accordion__content {
+  opacity: 1;
+  padding: 10px;
+}
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.content ol, .content p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}

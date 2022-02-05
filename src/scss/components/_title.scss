@@ -1,0 +1,19 @@
+.title{
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 50px;
+  &-js{
+    color: yellow;
+  }
+  &-css{
+    color: var(--color-css);
+  }
+  &-html{
+    color: var(--color-html);
+  }
+  &-main{
+    color: var(--color-main-title);
+  }
+}
