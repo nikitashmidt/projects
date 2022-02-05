@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+:root {
+  --font-family: "Segoe UI", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --color-light: #fff;
+  --color-main:#474545;
+  --color-css: rgb(76, 166, 250);
+  --color-html: rgb(235, 109, 26);
+  --color-main-title: rgb(183, 0, 255);
+}
+
+/* stylelint-disable */
+/* stylelint-disable */
+/* stylelint-disable */
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+  opacity: 1;
+}
+
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+  outline: 2px solid #f00;
+  outline-offset: 2px;
+}
+
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* stylelint-disable */
+/* stylelint-disable */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+.input-reset::-webkit-search-decoration, .input-reset::-webkit-search-cancel-button, .input-reset::-webkit-search-results-button, .input-reset::-webkit-search-results-decoration {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.accordion {
+  --accordion-time: 0.3s;
+  margin-bottom: 10px;
+}
+
+.accordion__control {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border: 1px solid #cccccc;
+  border-radius: 15px;
+  padding: 18px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.accordion__control:focus {
+  outline: none;
+}
+
+.accordion__control:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.accordion__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  margin-top: 20px;
+  will-change: max-height;
+  -webkit-transition: all var(--accordion-time) ease-out;
+  -o-transition: all var(--accordion-time) ease-out;
+  transition: all var(--accordion-time) ease-out;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.accordion__title {
+  font-weight: bold;
+  font-size: 1.17em;
+  color: white;
+}
+
+.accordion__icon {
+  -webkit-transition: -webkit-transform var(--accordion-time) ease-out;
+  transition: -webkit-transform var(--accordion-time) ease-out;
+  -o-transition: transform var(--accordion-time) ease-out;
+  transition: transform var(--accordion-time) ease-out;
+  transition: transform var(--accordion-time) ease-out, -webkit-transform var(--accordion-time) ease-out;
+}
+
+.is-open .accordion__icon {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.is-open .accordion__content {
+  opacity: 1;
+  padding: 10px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.content ol, .content p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.back {
+  position: fixed;
+  top: 50%;
+}
+.back a {
+  color: var(--color-light);
+}
+.back svg {
+  fill: var(--color-light);
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  vertical-align: middle;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.back-link {
+  right: 5%;
+}
+.back-link svg {
+  margin-left: 5px;
+}
+
+.back-left {
+  left: 5%;
+}
+.back-left svg {
+  margin-right: 5px;
+}
+
+.questions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.td {
+  text-decoration: underline;
+}
+
+.questions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.back {
+  position: fixed;
+  top: 50%;
+}
+
+.back a {
+  color: var(--color-light);
+}
+
+.back svg {
+  fill: var(--color-light);
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  vertical-align: middle;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.back-link {
+  right: 5%;
+}
+
+.back-link svg {
+  margin-left: 5px;
+}
+
+.back-left {
+  left: 5%;
+}
+
+.back-left svg {
+  margin-right: 5px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title-js {
+  color: yellow;
+}
+.title-css {
+  color: var(--color-css);
+}
+.title-html {
+  color: var(--color-html);
+}
+.title-main {
+  color: var(--color-main-title);
+}
+
+.btn {
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.btn:hover {
+  color: var(--color-main);
+  background-color: var(--color-light);
+}
+.btn:hover svg {
+  fill: var(--color-main);
+}
+
+.btn-close {
+  position: fixed;
+  top: 50px;
+  right: 5%;
+  padding: 10px;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  border: 1px solid var(--color-light);
+  border-radius: 10px;
+}
+.btn-close svg {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  vertical-align: middle;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  fill: white;
+}
+.btn-close:hover {
+  background-color: var(--color-light);
+}
+.btn-close:hover svg {
+  fill: var(--color-main);
+}
+
+.page__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: var(--vh);
+  background-color: var(--color-main);
+  color: var(--color-light);
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Questions</title>
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <h1 class="title title-js">javascript</h1>
+    <div class="content">
+      <div class="accordion accordion-1">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">Типы данных в JavaScript</span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <ol>
+                  <li>String</li>
+                  <li>Number</li>
+                  <li>Boolen</li>
+                  <li>Undefined</li>
+                  <li>Null</li>
+                  <li>BigInt</li>
+                  <li>Object</li>
+                  <li>Symbol</li>
+              </ol>
+          </div>
+      </div>
+      <div class="accordion accordion-2">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                      Что такое Strict Mode in JavaScript?
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  Заменяет некоторые ошибки js, современный js поддерживает
+                  «классы» и «модули» — продвинутые структуры языка
+                   которые автоматически включают строгий режим.
+                   Поэтому в них нет нужды добавлять директиву
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-3">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                      Разница между function declaration and function expression
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  <span class="td">function declaration</span> — указывается через ключевое слово function, затем
+                  имя функции. <br>
+                  <span class="td">function expression</span> — функция объявляется в переменную. <br>
+                      Разница — в том, что function declaration можно вызвать еще до
+                      объявления и это не вызовет ошибку. <br>
+                      Это происходит с помощью <span class="td">поднятия (hoisting)</span>
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-4">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                      Разница между null undefined
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  Оба значения обозначают отсутствующие данные <br>
+                  <span class="td">Undefined</span> — в случае когда переменная была объявлена, но ей не было
+                          задано какое-либо значение, <br>
+                      либо же в случаях когда функция ничего не возвращает, <br>
+                      либо же в случаях когда мы пытаемся получить несуществующее свойство объекта <br>
+                  <span class="td">Null</span> — когда чего-то явно не существует — вызов переменной, которой нету, <br>
+                      также null можем присвоить какой-либо переменной для обнуления значения.
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-5">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                  Операторы && || и!
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  && — находит и возвращает первое ложное значение, либо последний операнд, когда все значения истины <br>
+                  || — находит и возвращает первое истинное значение, <br>
+                  Эти операторы используют короткое замыкание — как только значение было найдено сразу же заканчивают дальнейшую проверку <br>
+                 ! — логическое отрицание
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-6">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                  Типов таймеров в js
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  <span class="td">setTimeout</span> — позволяет передавать функцию один раз по истечению заданного времени <br>
+                  <span class="td">setInterval</span>— позволяет вызывать функцию постоянно через определенный промежуток времени <br>
+                      Оба таймера принимают два значения — функция, которая будет выполнена,
+                      а также время <br>
+                  Оба таймера возвращают индентификатор, данный индентификатор может быть присвоен в переменную, <br>
+                  после чего переменную можно передать в одну из функций clearTimeout \ clearInterval <br>
+                  <span class="td">clearTimeout</span>— позволяет остановить setTimeout еще до момента вызова
+                  <span class="td">clearInterval</span>— единственный способ остановить setInterval
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-7">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                  Что такое поднятие (Hoisting)?
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  <span class="td">Hoisting</span>— механизм подъема функций или переменных в глобальную или в функциональную область видимости <br>
+                      к переменным, которые были объявлены через var, а также к функциям определенным <br>
+                      как function declaration, можно получить доступ еще до объявления значения <br>
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-8">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                  Что такое область видимости (Scope)?
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  <span class="td">Scope</span>— область видимости, место откуда мы имеем доступ к переменным или функциям. <br>
+                  В js есть 3 типа областей видимостей: <br>
+                  1 — <span class="td">Глобальная область видимости</span>— переменные и функции, которые были объявлены в этой области
+                      становятся глобальными и могут быть использованы из любого места в коде. <br>
+                  2 — <span class="td">Функциональная (локальная) область видимости</span>— переменные и функции объявлены внутри данной
+                      области видимости доступны только в данной области видимости и не могут быть использованы вне этой области <br>
+                  3 — <span class="td">Блочная область видимости (была введена в es6 для let and const)</span> —
+
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-9">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                  Что такое замыкание (Closure)?
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  <span class="td">Closure</span>-
+                  при создании функций и использовании в них переменных эти переменные доступны только локально <br>
+                  внутри функций, снаружи мы не можем получить к ним доступ, на хранение таких переменных <br>
+                  в том числе и аргументво выделяется определенная память, когда функция заканчивает свое <br>
+                  выполнение эта память очищается, таким образом эти переменные больше ни где не существуют <br>
+                  Но если внутри одной функции создать вторую функцию, то вложенная функция получит доступ <br>
+                  к переменным, которые были объявленны во внешней функции. <br>
+                  Этот механизм и называется замыканием (Closure) <br>
+
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-10">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                  Что обозначает this в JavaScript?
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  <span class="td">This</span>-
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-11">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                  Что такое функции высшего порядка (Higher Order Functions)?
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  <span class="td">HOF</span> —
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-12">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                  Как превратить любой тип данных в булевый? Перечислите ложные значения в JS?
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+              <p>
+                  <span class="td">0</span> —
+              </p>
+          </div>
+      </div>
+      <div class="accordion accordion-13">
+          <button class="accordion__control" aria-expanded="false">
+              <span class="accordion__title">
+                  Методы строк в JavaScript?
+              </span>
+              <span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__content" aria-hidden="true">
+                  <ol>
+                      <li>push</li>
+                      <li>push</li>
+                      <li>push</li>
+                  </ol>
+          </div>
+      </div>
+  </div>
+  <div class="back-left back">
+    <a href="questions-css.html" class="btn" title="css">
+    <svg>
+        <use xlink:href="img/sprite.svg#share-left"></use>
+    </svg>
+    css
+    </a>
+</div>
+    <div class="back-link back">
+        <a href="questions-html.html" class="btn" title="на главную страницу">
+            html
+            <svg>
+            <use xlink:href="img/sprite.svg#share-right"></use>
+            </svg>
+        </a>
+    </div>
+    <a href="index.html" class="btn-close">
+        <svg>
+        <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+    </a>
+  </div>
+</body>
+</html>
